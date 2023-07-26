@@ -1,0 +1,122 @@
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+} 
+html, body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+html {
+    box-sizing: border-box;
+}
+body {
+    background-color: hsl(185, 75%, 39%);
+    font-family: 'Kumbh Sans', sans-serif;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+main {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.top-bg-pattern {
+    position: absolute;
+    z-index: -1;
+    right: 47%;
+    bottom: 45%;
+}
+.bottom-bg-pattern {
+    position: absolute;
+    z-index: -1;
+    left: 53%;
+    top: 40%;
+}
+.container-img {
+    display: flex;
+    flex-direction: column;
+}
+.profile-card {
+    width: 350px;
+    height: 374px;
+    margin: auto;
+    border-radius: 1rem;
+    background-color: #FFFFFF;
+    z-index: 1;
+}
+.card-pattern {
+    height: 140px;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.profile-picture {
+    margin: auto;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: #FFFFFF;
+    position: relative;
+    z-index: 1;
+    bottom: 3em;
+}
+.info {
+    position: relative;
+    bottom: 3em;
+}
+h1 {
+    font-size: 18px;
+    font-weight: 700;
+    color: hsl(229, 23%, 23%);
+    letter-spacing: 0px;
+}
+span {
+    font-weight: 400;
+    color: #6B7082;
+}
+.city {
+    font-size: 14px;
+    font-weight: 400;
+    color: #6B7082;
+}
+hr {
+    color: hsl(0, 0%, 59%);
+    background-color: hsl(0, 0%, 59%);
+    height: 1px;
+    opacity: 0.3;
+}
+.statistics {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.stats {
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #2E3349;
+}
+.stat-headings {
+    margin-top: 5px;
+    font-size: 10px;
+    font-weight: 400;
+    color: #6B7082;
+    letter-spacing: 1.5px;
+}
+.attribution { 
+    font-size: 11px; text-align: center;
+    padding-top: 2em;
+ }
+.attribution a { 
+    text-decoration: none;
+    color: #FFFFFF;
+ }
+ a:hover {
+    color: hsl(229, 23%, 23%);
+ }
