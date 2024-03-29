@@ -1,122 +1,224 @@
+:root {
+  --Dark-cyan: hsl(185, 75%, 39%);
+  --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --Dark-grayish-blue: hsl(227, 10%, 46%);
+  --Dark-gray: hsl(0, 0%, 59%);
+  --white: #ffffff;
+  --line: #e8e9ec;
+  --fw-primary: 700;
+  --fw-secondary: 400;
+  --fs-primary: 1.125rem;
+  --fs-medium: 0.875rem;
+  --fs-small: 0.625rem;
+  --lh-primary: 1.375;
+  --lh-medium: 1.0625;
+  --lh-secondary: 0.75rem;
+  --ls-small: 0.09375em;
+  --br-primary: 0.9375rem;
+  --bg-set: 28rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
 html {
-    box-sizing: border-box;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  box-sizing: border-box;
 }
-*, *::before, *::after {
-    box-sizing: inherit;
-} 
-html, body {
-	margin: 0;
-	padding: 0;
-	border: 0;
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
 }
-html {
-    box-sizing: border-box;
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
 }
+
+/* Set core body defaults */
 body {
-    background-color: hsl(185, 75%, 39%);
-    font-family: 'Kumbh Sans', sans-serif;
-    text-align: center;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
+  min-height: 100vh;
+  line-height: 1.5;
 }
-main {
-    margin: auto;
-    display: flex;
-    flex-direction: column;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
-.top-bg-pattern {
-    position: absolute;
-    z-index: -1;
-    right: 47%;
-    bottom: 45%;
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
 }
-.bottom-bg-pattern {
-    position: absolute;
-    z-index: -1;
-    left: 53%;
-    top: 40%;
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
 }
-.container-img {
-    display: flex;
-    flex-direction: column;
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
 }
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Dark-cyan);
+  text-align: center;
+  background-image: url("../images/bg-pattern-top.svg"),
+    url("../images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: calc(50% - var(--bg-set)) calc(50% - var(--bg-set)),
+    calc(50% + var(--bg-set)) calc(50% + var(--bg-set));
+}
+
 .profile-card {
-    width: 350px;
-    height: 374px;
-    margin: auto;
-    border-radius: 1rem;
-    background-color: #FFFFFF;
-    z-index: 1;
+  background: var(--white);
+  box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.504835);
+  border-radius: var(--br-primary);
+  padding-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
-.card-pattern {
-    height: 140px;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
+
+.container-img {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4.5rem;
 }
-.profile-picture {
-    margin: auto;
-    width: 96px;
-    height: 96px;
-    border-radius: 50%;
-    border-style: solid;
-    border-color: #FFFFFF;
-    position: relative;
-    z-index: 1;
-    bottom: 3em;
+
+.avatar {
+  border: 0.3125rem solid var(--white);
+  border-radius: 100%;
+  position: absolute;
+  top: 23%;
+  align-self: center;
 }
-.info {
-    position: relative;
-    bottom: 3em;
-}
+
 h1 {
-    font-size: 18px;
-    font-weight: 700;
-    color: hsl(229, 23%, 23%);
-    letter-spacing: 0px;
+  font-weight: var(--fw-primary);
+  font-size: var(--fs-primary);
+  line-height: var(--lh-primary);
+  color: var(--Very-dark-desaturated-blue);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }
-span {
-    font-weight: 400;
-    color: #6B7082;
+
+h1 span {
+  font-weight: var(--fw-secondary);
+  color: var(--Dark-grayish-blue);
 }
-.city {
-    font-size: 14px;
-    font-weight: 400;
-    color: #6B7082;
+
+p {
+  font-weight: var(--fw-secondary);
+  font-size: var(--fs-medium);
+  line-height: var(--lh-medium);
+  text-align: center;
+  color: var(--Dark-grayish-blue);
+  margin-top: 0;
+  margin-bottom: 1.75rem;
 }
+
 hr {
-    color: hsl(0, 0%, 59%);
-    background-color: hsl(0, 0%, 59%);
-    height: 1px;
-    opacity: 0.3;
+  background: var(--line);
+  margin: 0;
+  border: 1px;
+  height: 1px;
+  margin-bottom: 1.5rem;
 }
+
 .statistics {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: center;
 }
+
 .stats {
-    margin-bottom: 0;
-    font-size: 18px;
-    font-weight: 700;
-    color: #2E3349;
+  font-weight: var(--fw-primary);
+  font-size: var(--fs-primary);
+  line-height: var(--lh-primary);
+  color: var(--Very-dark-desaturated-blue);
 }
+
 .stat-headings {
-    margin-top: 5px;
-    font-size: 10px;
-    font-weight: 400;
-    color: #6B7082;
-    letter-spacing: 1.5px;
+  font-weight: var(--fw-secondary);
+  font-size: var(--fs-small);
+  line-height: var(--lh-secondary);
+  letter-spacing: var(--ls-small);
+  color: var(--Dark-grayish-blue);
 }
-.attribution { 
-    font-size: 11px; text-align: center;
-    padding-top: 2em;
- }
-.attribution a { 
-    text-decoration: none;
-    color: #FFFFFF;
- }
- a:hover {
-    color: hsl(229, 23%, 23%);
- }
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  gap: 0.3125rem;
+}
+
+ul:first-of-type {
+  margin-right: 2.875rem;
+}
+
+ul:nth-child(2) {
+  margin-right: 3.5rem;
+}

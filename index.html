@@ -1,48 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <title>Frontend Mentor | Profile card component</title>
-</head>
-<body>
-  <main>
-      <img class="top-bg-pattern" src="images/bg-pattern-top.svg" alt="">
-    <div class="profile-card">
-      <div class="container-img">
-        <img class="card-pattern" src="images/bg-pattern-card.svg" alt="">
-        <img class="profile-picture" src="images/image-victor.jpg" alt="Victor">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore Victor Crest's profile card component featuring his profile picture, age, location, and social statistics. Discover his followers, likes, and uploaded photos in this beautifully designed frontend mentor project."
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Profile card component</title>
+  </head>
+  <body>
+    <main>
+      <div class="profile-card">
+        <div class="container-img">
+          <img
+            class="card-pattern"
+            src="images/bg-pattern-card.svg"
+            alt=""
+            role="presentation"
+          />
+          <img
+            class="avatar"
+            src="images/image-victor.jpg"
+            alt="Profile picture of Victor"
+          />
+        </div>
+        <div class="info">
+          <h1>Victor Crest <span>26</span></h1>
+          <p class="city">London</p>
+          <hr />
+          <div class="statistics">
+            <ul>
+              <li class="stats">80K</li>
+              <li class="stat-headings">Followers</li>
+            </ul>
+            <ul>
+              <li class="stats">803K</li>
+              <li class="stat-headings">Likes</li>
+            </ul>
+            <ul>
+              <li class="stats">1.4K</li>
+              <li class="stat-headings">Photos</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="info">
-        <h1>Victor Crest <span>26</span></h1>
-      <p class="city">London</p>
-      <hr>
-      <div class="statistics"> 
-        <div>
-            <p class="stats">80K</p>
-            <p class="stat-headings">Followers</p>
-        </div>
-        <div>
-            <p class="stats">803K</p>
-            <p class="stat-headings">Likes</p>
-        </div>
-        <div>
-            <p class="stats">1.4K</p>
-            <p class="stat-headings">Photos</p>
-        </div>
-        </div>
-      </div>
-    </div>
-        <img class="bottom-bg-pattern" src="images/bg-pattern-bottom.svg" alt="">
-        <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
-          Coded by <a href="https://github.com/mkboris">Makoge Boris</a>
-        </div>
-  </main>
-</body>
+    </main>
+  </body>
 </html>
