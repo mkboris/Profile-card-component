@@ -26,8 +26,8 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 ### Links
 
 - Solution URL: https://github.com/mkboris/Profile-card-component
-- Live Site URL: https://mkboris.github.io/Profile-card-component/
-
+- Live Site URL: https://profile-card-component-v2xn-ojmslup0u-makoge-boris-projects.vercel.app/
+- 
 ### Built with
 
 - Semantic HTML5 markup
